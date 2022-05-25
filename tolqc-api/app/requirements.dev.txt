@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2022 Genome Research Ltd.
+#
+# SPDX-License-Identifier: MIT
+
+# include the contents of the general requirements.txt file
+-r ./requirements.txt
+
+debugpy == 1.6.0

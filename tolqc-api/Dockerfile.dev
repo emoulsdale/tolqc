@@ -24,9 +24,9 @@ RUN wget --no-check-certificate https://github.com/jwilder/dockerize/releases/do
 COPY ./app/setup.py .
 RUN python3 setup.py install
 
-COPY ./app/requirements.txt .
-RUN pip3 --no-cache-dir install -r requirements.txt
+COPY ./app/requirements.txt ./app/requirements.dev.txt ./
+RUN pip3 --no-cache-dir install -r requirements.dev.txt
 
 COPY ./app /app
 
-CMD [ "python", "run.py" ]
+CMD [ "python", "-m", "debugpy", "--listen", "0.0.0.0:5682", "./run.py" ]

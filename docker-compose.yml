@@ -38,6 +38,7 @@ services:
       - ENVIRONMENT
     ports:
       - 8082:80
+      - 5682:5682
     volumes:
       - './tolqc-api/app/main:/app/main'
 

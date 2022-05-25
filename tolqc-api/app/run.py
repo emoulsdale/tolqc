@@ -11,7 +11,8 @@ def main():
     app.run(
         host='0.0.0.0',
         debug=True,
-        port=80
+        port=80,
+        use_reloader=True,
     )
 
 

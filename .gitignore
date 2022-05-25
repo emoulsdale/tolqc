@@ -10,6 +10,5 @@ instance/
 __pycache__
 swagger_server.egg-info/
 __init__.pyc
-launch.json
 .env.dev
 .env.prod
